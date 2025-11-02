@@ -1,55 +1,76 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-    <!-- Title of the Page -->
-    <title>About Page</title>
-
-    
-    <!-- Link to css file -->
-    <link rel="stylesheet" href="../css/styles.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>About Us - Haupt Computers</title>
+  <link rel="stylesheet" href="../css/styles.css">
+  <style>
+    #map {
+      width: 100%;
+      max-width: 700px;
+      height: 400px;
+      margin: 20px auto;
+      border-radius: 10px;
+      border: 2px solid #333;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.3);
+    }
+    h1, h2, p {
+      text-align: center;
+    }
+    section {
+      background: #f6f6f6;
+      padding: 20px;
+      border-radius: 8px;
+      max-width: 900px;
+      margin: 0 auto;
+    }
+  </style>
 </head>
-<header>
-<!-- Navigation Menu -->
-<nav>
-    <a href="index.html">Home Page</a>
-    <a href="enquiry.html">Enquiry</a>
-    <a href="products.html">Products</a>
-    <a href="about.html">About Us</a>
-    <a href="services.html">Services</a>
-    <a href="contact.html">Contact Us</a>
-</nav>
-</header>
-<main>
-    <body id="topOfPage">
-    <!-- Page Heading -->
-    <h1>About Us</h1>
-    <hr>
-    <p>
-        Haupt Computers was established in 1993 as a PC sales and repair company. <br>
-        Since then we expanded our range of services to include maintenance contracts, network design, and implementation. <br>
-        We also supply a wide range of hardware and software products. <br>
-        We are an independent company and are not tied to any particular manufacturer. 
-        This means we can offer unbiased advice and recommend the best products for your needs. <br>
-        We pride ourselves on our customer service and strive to build long-term relationships with our clients. <br>
-        We believe in providing high-quality products and services at competitive prices. <br>
-        Our team of experienced technicians are on hand to provide support and assistance whenever you need it. <br>
-        We look forward to working with you and helping you achieve your business goals.
-    </p>
-    </main>
-    <!-- Footer Section -->
-    <footer>
-        <!-- Contact Information & Copyright -->
-        <p>&copy; 2025 Haupt Computers. All rights reserved.</p>
-        <p>
-            Email: <a href="mailto:HauptComputers@gmail.com">HauptComputers@gmail.com</a><br>
-            Telephone: 01234 567890
-        </p>
 
-        <!-- Back to top link -->
-        <a href="#topOfPage">Back to Top</a>
-    </footer>
+<body id="topOfPage">
+  <header>
+    <nav>
+      <a href="index.html">Home Page</a>
+      <a href="enquiry.html">Enquiry</a>
+      <a href="products.html">Products</a>
+      <a href="about.html">About Us</a>
+      <a href="services.html">Services</a>
+      <a href="contact.html">Contact Us</a>
+    </nav>
+  </header>
+
+  <main>
+    <h1>About Haupt Computers</h1>
+    <hr><br>
+
+    <section>
+      <p>Haupt Computers provides reliable IT products and network solutions across Durban and nearby regions. We focus on excellent customer support and value-driven technology.</p>
+
+      <h2>Find Us</h2>
+      <p>191 Anleno Road, Montclair, Durban, South Africa</p>
+
+      
+      <div id="map">
+        <iframe
+          src="https://www.google.com/maps?&q=191%20Anleno%20Road%2C%20Montclair%2C%20Durban%2C%20South%20Africa&output=embed&t=k"
+          width="100%" height="100%" style="border:0; border-radius:10px;"
+          allowfullscreen="" loading="lazy"
+          referrerpolicy="no-referrer-when-downgrade">
+        </iframe>
+      </div>
+
+      <p>Visit us for professional advice and top-quality computer solutions.</p>
+    </section>
+  </main>
+
+  <footer>
+    <p>&copy; 2025 Haupt Computers. All rights reserved.</p>
+    <p>
+      Email: <a href="mailto:HauptComputers@gmail.com">HauptComputers@gmail.com</a><br>
+      Telephone: 01234 567890
+    </p>
+    <a href="#topOfPage">Back to Top</a>
+  </footer>
 </body>
 </html>
