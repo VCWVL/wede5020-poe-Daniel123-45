@@ -3,7 +3,12 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Products Page</title>
+  <title>Computer Products | Haupt Computers — Desktops, Laptops, Monitors, Networking, Printers, Storage & Custom PCs</title>
+  <meta name="description" content="Browse desktops, laptops, monitors, networking gear, printers, storage and custom-built PCs from Haupt Computers. Great prices, nationwide delivery and friendly support.">
+  <meta name="keywords" content="computers, desktops, laptops, monitors, networking, printers, scanners, storage, SSD, custom PCs, Durban, South Africa">
+  <meta property="og:title" content="Haupt Computers — Products">
+  <meta property="og:description" content="Desktops, laptops, monitors, networking gear, printers, storage & custom PCs. Nationwide delivery and support.">
+  <meta property="og:type" content="website">
   <link rel="stylesheet" href="../css/styles.css">
 </head>
 <body id="topOfPage">
@@ -25,12 +30,14 @@
     <p>We offer a wide range of computer products for both home and business use. Below are some of our most popular categories.</p>
 
     <input type="text" id="search-box" placeholder="Search products...">
-    <div id="no-results">No matching products found.</div>
+    <div id="no-results" style="display:none;text-align:center;margin-top:20px;color:#6e2222;font-weight:bold">No matching products found.</div>
+
+    <h2>Shop by Category</h2>
 
     <ul class="product-list">
-      <li class="reveal">
+      <li id="desktops-laptops" class="reveal">
         <h3>Desktops and Laptops</h3>
-        <img src="../_Images/Desktops.jpeg" alt="Desktops and Laptops">
+        <img src="../_Images/Desktops.jpeg" alt="Desktops and laptops for home, business and gaming" loading="lazy" decoding="async" width="1200" height="900">
         <p><strong>Price Range:</strong> R5 999 – R25 000</p>
         <p>We offer a variety of desktops and laptops for students, businesses, and gamers. Choose from trusted brands such as HP, Dell, and Lenovo.</p>
         <ul>
@@ -41,9 +48,9 @@
         </ul>
       </li>
 
-      <li class="reveal">
+      <li id="monitors" class="reveal">
         <h3>Monitors and Accessories</h3>
-        <img src="../_Images/Monitors.jpeg" alt="Monitors and Accessories">
+        <img src="../_Images/Monitors.jpeg" alt="Full HD and 4K monitors with stands and accessories" loading="lazy" decoding="async" width="1200" height="900">
         <p><strong>Price Range:</strong> R1 499 – R8 000</p>
         <p>Our monitor range includes everything from basic office displays to full HD and 4K gaming monitors. We also stock accessories like keyboards, mice, and webcams.</p>
         <ul>
@@ -54,9 +61,9 @@
         </ul>
       </li>
 
-      <li class="reveal">
+      <li id="networking" class="reveal">
         <h3>Networking Equipment</h3>
-        <img src="../_Images/Networks.jpeg" alt="Networking Equipment">
+        <img src="../_Images/Networks.jpeg" alt="Wi-Fi 6 routers, gigabit switches and Cat6 network cables" loading="lazy" decoding="async" width="1200" height="900">
         <p><strong>Price Range:</strong> R499 – R12 000</p>
         <p>Everything you need to stay connected. We supply routers, switches, network cables, and Wi-Fi extenders suitable for home and business setups.</p>
         <ul>
@@ -67,9 +74,9 @@
         </ul>
       </li>
 
-      <li class="reveal">
+      <li id="printers-scanners" class="reveal">
         <h3>Printers and Scanners</h3>
-        <img src="../_Images/PrintersScanners.jpeg" alt="Printers and Scanners">
+        <img src="../_Images/PrintersScanners.jpeg" alt="HP, Canon and Epson printers and scanners for home and office" loading="lazy" decoding="async" width="1200" height="900">
         <p><strong>Price Range:</strong> R1 999 – R9 500</p>
         <p>Reliable printing and scanning for home and office use. We stock HP, Canon, and Epson brands with both inkjet and laser technology.</p>
         <ul>
@@ -80,9 +87,9 @@
         </ul>
       </li>
 
-      <li class="reveal">
+      <li id="storage" class="reveal">
         <h3>Storage Devices</h3>
-        <img src="../_Images/Storage.jpeg" alt="Storage Devices">
+        <img src="../_Images/Storage.jpeg" alt="External SSDs, hard drives, USB flash drives and SD cards" loading="lazy" decoding="async" width="1200" height="900">
         <p><strong>Price Range:</strong> R399 – R5 000</p>
         <p>Keep your data safe with our selection of storage drives. We offer both portable and desktop storage solutions.</p>
         <ul>
@@ -93,9 +100,9 @@
         </ul>
       </li>
 
-      <li class="reveal">
+      <li id="custom-pc" class="reveal">
         <h3>Custom-built PCs</h3>
-        <img src="../_Images/CustomPc.jpeg" alt="Custom-built PCs">
+        <img src="../_Images/CustomPc.jpeg" alt="Custom gaming and workstation PCs with RGB options" loading="lazy" decoding="async" width="1200" height="900">
         <p><strong>Price Range:</strong> R8 000 – R35 000</p>
         <p>We can design and build a custom PC to meet your needs. Whether you are gaming, editing, or just need high performance, we can assist.</p>
         <ul>
@@ -206,65 +213,28 @@
   </footer>
 
   <script>
-  document.addEventListener('DOMContentLoaded', function () {
-    const tabButtons = Array.from(document.querySelectorAll('.tablink'));
-    const tabPanels  = Array.from(document.querySelectorAll('.tabcontent'));
-    function activateTab(id) {
-      tabButtons.forEach(b => {
-        const active = b.getAttribute('data-tab') === id;
-        b.classList.toggle('active', active);
-        b.setAttribute('aria-selected', active ? 'true' : 'false');
-      });
-      tabPanels.forEach(p => p.classList.toggle('is-active', p.id === id));
-    }
-    tabButtons.forEach(btn => {
-      btn.addEventListener('click', () => activateTab(btn.getAttribute('data-tab')));
-      btn.addEventListener('keydown', e => { if (e.key === 'Enter' || e.key === ' ') { e.preventDefault(); activateTab(btn.getAttribute('data-tab')); }});
-    });
-    if (!document.querySelector('.tabcontent.is-active') && tabPanels[0]) activateTab(tabPanels[0].id);
-    document.querySelectorAll('.accordion').forEach(btn => {
-      const panel = document.getElementById(btn.getAttribute('aria-controls'));
-      btn.addEventListener('click', () => {
-        const isOpen = btn.getAttribute('aria-expanded') === 'true';
-        btn.setAttribute('aria-expanded', String(!isOpen));
-        btn.classList.toggle('active', !isOpen);
-        panel.classList.toggle('open', !isOpen);
-      });
-      btn.setAttribute('aria-expanded', 'false');
-      if (panel) panel.classList.remove('open');
-    });
-    const modal = document.getElementById('hc-modal');
-    const openBtn = document.querySelector('.btn-open-modal');
-    const closeBtn = document.querySelector('.modal-close');
-    function openModal(){ modal.classList.add('open'); modal.setAttribute('aria-hidden','false'); }
-    function closeModal(){ modal.classList.remove('open'); modal.setAttribute('aria-hidden','true'); }
-    if (openBtn) openBtn.addEventListener('click', openModal);
-    if (closeBtn) closeBtn.addEventListener('click', closeModal);
-    if (modal) modal.addEventListener('click', e => { if (e.target === modal) closeModal(); });
+    document.addEventListener('DOMContentLoaded',function(){
+      const t=[...document.querySelectorAll('.tablink')],e=[...document.querySelectorAll('.tabcontent')];
+      function n(a){t.forEach(o=>{const r=o.getAttribute('data-tab')===a;o.classList.toggle('active',r),o.setAttribute('aria-selected',r?'true':'false')}),e.forEach(o=>o.classList.toggle('is-active',o.id===a))}
+      t.forEach(a=>{a.addEventListener('click',()=>n(a.getAttribute('data-tab')));a.addEventListener('keydown',o=>{if(o.key==='Enter'||o.key===' '){o.preventDefault();n(a.getAttribute('data-tab'))}})});
+      !document.querySelector('.tabcontent.is-active')&&e[0]&&n(e[0].id);
 
-    const reveals = document.querySelectorAll('.reveal');
-    const io = new IntersectionObserver(entries=>{
-      entries.forEach(entry=>{
-        if(entry.isIntersecting){entry.target.classList.add('reveal-visible');io.unobserve(entry.target);}
-      });
-    },{threshold:.15});
-    reveals.forEach(el=>io.observe(el));
+      document.querySelectorAll('.accordion').forEach(a=>{const o=document.getElementById(a.getAttribute('aria-controls'));a.addEventListener('click',()=>{const r=a.getAttribute('aria-expanded')==='true';a.setAttribute('aria-expanded',String(!r));a.classList.toggle('active',!r);o.classList.toggle('open',!r)});a.setAttribute('aria-expanded','false');o&&o.classList.remove('open')});
 
-    const searchBox = document.getElementById('search-box');
-    const products = document.querySelectorAll('.product-list li');
-    const noResults = document.getElementById('no-results');
-    searchBox.addEventListener('input', () => {
-      const query = searchBox.value.toLowerCase();
-      let visibleCount = 0;
-      products.forEach(li => {
-        const text = li.textContent.toLowerCase();
-        const match = text.includes(query);
-        li.style.display = match ? '' : 'none';
-        if (match) visibleCount++;
-      });
-      noResults.style.display = visibleCount ? 'none' : 'block';
+      const s=document.getElementById('hc-modal'),l=document.querySelector('.btn-open-modal'),c=document.querySelector('.modal-close');
+      function d(){s.classList.add('open');s.setAttribute('aria-hidden','false')}
+      function m(){s.classList.remove('open');s.setAttribute('aria-hidden','true')}
+      l&&l.addEventListener('click',d);c&&c.addEventListener('click',m);s&&s.addEventListener('click',a=>{a.target===s&&m()});
+
+      const i=document.querySelectorAll('.reveal'),u=new IntersectionObserver(a=>{a.forEach(o=>{o.isIntersecting&&(o.target.classList.add('reveal-visible'),u.unobserve(o.target))})},{threshold:.15});i.forEach(a=>u.observe(a));
+
+      const g=document.getElementById('search-box'),p=document.querySelectorAll('.product-list li'),h=document.getElementById('no-results');
+      g&&g.addEventListener('input',()=>{const a=g.value.toLowerCase();let o=0;p.forEach(r=>{const y=r.textContent.toLowerCase().includes(a);r.style.display=y?'':'none',y&&o++});h.style.display=o?'none':'block'});
     });
-  });
+  </script>
+
+  <script type="application/ld+json">
+  {"@context":"https://schema.org","@type":"ItemList","name":"Haupt Computers Product Categories","itemListElement":[{"@type":"ListItem","position":1,"name":"Desktops and Laptops","url":"products.html#desktops-laptops"},{"@type":"ListItem","position":2,"name":"Monitors and Accessories","url":"products.html#monitors"},{"@type":"ListItem","position":3,"name":"Networking Equipment","url":"products.html#networking"},{"@type":"ListItem","position":4,"name":"Printers and Scanners","url":"products.html#printers-scanners"},{"@type":"ListItem","position":5,"name":"Storage Devices","url":"products.html#storage"},{"@type":"ListItem","position":6,"name":"Custom-built PCs","url":"products.html#custom-pc"}]}
   </script>
 </body>
 </html>
