@@ -6,6 +6,28 @@
   <title>Products Page</title>
   <link rel="stylesheet" href="../css/styles.css">
 
+  <style>
+    #search-box {
+      margin: 20px auto;
+      display: block;
+      max-width: 400px;
+      width: 90%;
+      padding: 10px 14px;
+      border: 2px solid #333;
+      border-radius: 6px;
+      font-size: 1rem;
+      outline: none;
+      transition: border-color 0.3s;
+    }
+    #search-box:focus { border-color: #6e2222; }
+    #no-results {
+      text-align: center;
+      margin-top: 20px;
+      color: #6e2222;
+      font-weight: bold;
+      display: none;
+    }
+  </style>
 </head>
 <body id="topOfPage">
 
@@ -25,7 +47,9 @@
     <hr>
     <p>We offer a wide range of computer products for both home and business use. Below are some of our most popular categories.</p>
 
-    
+    <input type="text" id="search-box" placeholder="Search products...">
+    <div id="no-results">No matching products found.</div>
+
     <ul class="product-list">
       <li class="reveal">
         <h3>Desktops and Laptops</h3>
@@ -106,7 +130,6 @@
       </li>
     </ul>
 
-   
     <section class="tabs-wrap">
       <h2>Compare Products</h2>
       <div class="tabs" role="tablist" aria-label="Compare Products">
@@ -152,10 +175,8 @@
       </div>
     </section>
 
-   
     <section class="accordion-wrap">
       <h2>Frequently Asked Questions</h2>
-
       <button class="accordion" aria-expanded="false" aria-controls="p1" id="a1">Do you offer delivery?</button>
       <div class="panel" id="p1" role="region" aria-labelledby="a1">
         <p><strong>Yes.</strong> We deliver nationwide via trusted couriers.</p>
@@ -208,12 +229,9 @@
   </footer>
 
   <script>
-  
   document.addEventListener('DOMContentLoaded', function () {
-   
     const tabButtons = Array.from(document.querySelectorAll('.tablink'));
     const tabPanels  = Array.from(document.querySelectorAll('.tabcontent'));
-
     function activateTab(id) {
       tabButtons.forEach(b => {
         const active = b.getAttribute('data-tab') === id;
@@ -222,19 +240,11 @@
       });
       tabPanels.forEach(p => p.classList.toggle('is-active', p.id === id));
     }
-
     tabButtons.forEach(btn => {
       btn.addEventListener('click', () => activateTab(btn.getAttribute('data-tab')));
-      btn.addEventListener('keydown', (e) => {
-        if (e.key === 'Enter' || e.key === ' ') { e.preventDefault(); activateTab(btn.getAttribute('data-tab')); }
-      });
+      btn.addEventListener('keydown', e => { if (e.key === 'Enter' || e.key === ' ') { e.preventDefault(); activateTab(btn.getAttribute('data-tab')); }});
     });
-
-    if (!document.querySelector('.tabcontent.is-active') && tabPanels[0]) {
-      activateTab(tabPanels[0].id);
-    }
-
-    
+    if (!document.querySelector('.tabcontent.is-active') && tabPanels[0]) activateTab(tabPanels[0].id);
     document.querySelectorAll('.accordion').forEach(btn => {
       const panel = document.getElementById(btn.getAttribute('aria-controls'));
       btn.addEventListener('click', () => {
@@ -246,30 +256,37 @@
       btn.setAttribute('aria-expanded', 'false');
       if (panel) panel.classList.remove('open');
     });
-
-    
     const modal = document.getElementById('hc-modal');
     const openBtn = document.querySelector('.btn-open-modal');
     const closeBtn = document.querySelector('.modal-close');
-
     function openModal(){ modal.classList.add('open'); modal.setAttribute('aria-hidden','false'); }
     function closeModal(){ modal.classList.remove('open'); modal.setAttribute('aria-hidden','true'); }
-
     if (openBtn) openBtn.addEventListener('click', openModal);
     if (closeBtn) closeBtn.addEventListener('click', closeModal);
-    if (modal) modal.addEventListener('click', (e) => { if (e.target === modal) closeModal(); });
+    if (modal) modal.addEventListener('click', e => { if (e.target === modal) closeModal(); });
 
-   
     const reveals = document.querySelectorAll('.reveal');
-    const io = new IntersectionObserver((entries)=>{
+    const io = new IntersectionObserver(entries=>{
       entries.forEach(entry=>{
-        if(entry.isIntersecting){
-          entry.target.classList.add('reveal-visible');
-          io.unobserve(entry.target);
-        }
+        if(entry.isIntersecting){entry.target.classList.add('reveal-visible');io.unobserve(entry.target);}
       });
-    }, { threshold: .15 });
+    },{threshold:.15});
     reveals.forEach(el=>io.observe(el));
+
+    const searchBox = document.getElementById('search-box');
+    const products = document.querySelectorAll('.product-list li');
+    const noResults = document.getElementById('no-results');
+    searchBox.addEventListener('input', () => {
+      const query = searchBox.value.toLowerCase();
+      let visibleCount = 0;
+      products.forEach(li => {
+        const text = li.textContent.toLowerCase();
+        const match = text.includes(query);
+        li.style.display = match ? '' : 'none';
+        if (match) visibleCount++;
+      });
+      noResults.style.display = visibleCount ? 'none' : 'block';
+    });
   });
   </script>
 </body>
