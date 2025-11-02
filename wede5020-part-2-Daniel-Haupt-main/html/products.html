@@ -5,6 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Products Page</title>
   <link rel="stylesheet" href="../css/styles.css">
+
 </head>
 <body id="topOfPage">
 
@@ -24,8 +25,9 @@
     <hr>
     <p>We offer a wide range of computer products for both home and business use. Below are some of our most popular categories.</p>
 
+    
     <ul class="product-list">
-      <li>
+      <li class="reveal">
         <h3>Desktops and Laptops</h3>
         <img src="../_Images/Desktops.jpeg" alt="Desktops and Laptops">
         <p><strong>Price Range:</strong> R5 999 – R25 000</p>
@@ -38,7 +40,7 @@
         </ul>
       </li>
 
-      <li>
+      <li class="reveal">
         <h3>Monitors and Accessories</h3>
         <img src="../_Images/Monitors.jpeg" alt="Monitors and Accessories">
         <p><strong>Price Range:</strong> R1 499 – R8 000</p>
@@ -51,7 +53,7 @@
         </ul>
       </li>
 
-      <li>
+      <li class="reveal">
         <h3>Networking Equipment</h3>
         <img src="../_Images/Networks.jpeg" alt="Networking Equipment">
         <p><strong>Price Range:</strong> R499 – R12 000</p>
@@ -64,7 +66,7 @@
         </ul>
       </li>
 
-      <li>
+      <li class="reveal">
         <h3>Printers and Scanners</h3>
         <img src="../_Images/PrintersScanners.jpeg" alt="Printers and Scanners">
         <p><strong>Price Range:</strong> R1 999 – R9 500</p>
@@ -77,7 +79,7 @@
         </ul>
       </li>
 
-      <li>
+      <li class="reveal">
         <h3>Storage Devices</h3>
         <img src="../_Images/Storage.jpeg" alt="Storage Devices">
         <p><strong>Price Range:</strong> R399 – R5 000</p>
@@ -90,7 +92,7 @@
         </ul>
       </li>
 
-      <li>
+      <li class="reveal">
         <h3>Custom-built PCs</h3>
         <img src="../_Images/CustomPc.jpeg" alt="Custom-built PCs">
         <p><strong>Price Range:</strong> R8 000 – R35 000</p>
@@ -104,35 +106,88 @@
       </li>
     </ul>
 
+   
     <section class="tabs-wrap">
       <h2>Compare Products</h2>
-      <div class="tabs">
-        <button class="tablink active" data-tab="t1">Budget</button>
-        <button class="tablink" data-tab="t2">Business</button>
-        <button class="tablink" data-tab="t3">Gaming</button>
+      <div class="tabs" role="tablist" aria-label="Compare Products">
+        <button class="tablink active" role="tab" aria-selected="true" aria-controls="t1" id="tab-t1" data-tab="t1">Budget</button>
+        <button class="tablink" role="tab" aria-selected="false" aria-controls="t2" id="tab-t2" data-tab="t2">Business</button>
+        <button class="tablink" role="tab" aria-selected="false" aria-controls="t3" id="tab-t3" data-tab="t3">Gaming</button>
       </div>
 
-      <div id="t1" class="tabcontent" style="display:block">
-        <p>Budget range focuses on affordability and practicality. Ideal for students and casual users.</p>
+      <div id="t1" class="tabcontent is-active" role="tabpanel" aria-labelledby="tab-t1">
+        <h3>Budget Range – What you get</h3>
+        <ul>
+          <li><strong>Performance:</strong> Office, web, Zoom/Teams, streaming.</li>
+          <li><strong>Specs:</strong> Intel i3 / Ryzen 3, 8 GB RAM (upgradable), 240–512 GB SSD.</li>
+          <li><strong>Best for:</strong> Students, home users, admin tasks.</li>
+          <li><strong>Upgrades:</strong> Add RAM/SSD later as needs grow.</li>
+          <li><strong>Warranty:</strong> 1-year standard; extended options available.</li>
+          <li><strong>Tip:</strong> Choose 16 GB RAM if you keep many browser tabs open.</li>
+        </ul>
       </div>
-      <div id="t2" class="tabcontent">
-        <p>Business range offers reliability and performance. Includes on-site support options.</p>
+
+      <div id="t2" class="tabcontent" role="tabpanel" aria-labelledby="tab-t2">
+        <h3>Business Range – What you get</h3>
+        <ul>
+          <li><strong>Performance:</strong> Multitasking with accounting/ERP, browsers, email and Excel together.</li>
+          <li><strong>Specs:</strong> Intel i5/i7 or Ryzen 5/7, 16–32 GB RAM, 512 GB–1 TB NVMe SSD.</li>
+          <li><strong>Security:</strong> Windows 11 Pro, BitLocker, TPM.</li>
+          <li><strong>Reliability:</strong> Business-grade components and thermals.</li>
+          <li><strong>Support:</strong> Optional on-site SLA and next-business-day parts (where available).</li>
+          <li><strong>Tip:</strong> Pair with a UPS and automatic cloud backups.</li>
+        </ul>
       </div>
-      <div id="t3" class="tabcontent">
-        <p>Gaming systems come with high-end GPUs, advanced cooling, and RGB lighting.</p>
+
+      <div id="t3" class="tabcontent" role="tabpanel" aria-labelledby="tab-t3">
+        <h3>Gaming Range – What you get</h3>
+        <ul>
+          <li><strong>Performance:</strong> High FPS at 1080p/1440p; 4K on top-end GPUs.</li>
+          <li><strong>Specs:</strong> Intel i5/i7 or Ryzen 5/7, 16–32 GB RAM, RTX 4060–4090 / RX 7600–7900, 1 TB NVMe.</li>
+          <li><strong>Thermals:</strong> Air/AIO cooling, airflow cases.</li>
+          <li><strong>Expandability:</strong> Easy GPU, storage and RAM upgrades.</li>
+          <li><strong>Extras:</strong> RGB, Wi-Fi 6/6E, low-latency peripherals.</li>
+          <li><strong>Tip:</strong> Match your GPU to your monitor’s resolution/refresh.</li>
+        </ul>
       </div>
     </section>
 
+   
     <section class="accordion-wrap">
       <h2>Frequently Asked Questions</h2>
-      <button class="accordion">Do you offer delivery?</button>
-      <div class="panel"><p>Yes, delivery is available across South Africa. Delivery times depend on your location.</p></div>
 
-      <button class="accordion">Can I get a warranty?</button>
-      <div class="panel"><p>All products come with at least a 1-year warranty. Extended warranties are available on request.</p></div>
+      <button class="accordion" aria-expanded="false" aria-controls="p1" id="a1">Do you offer delivery?</button>
+      <div class="panel" id="p1" role="region" aria-labelledby="a1">
+        <p><strong>Yes.</strong> We deliver nationwide via trusted couriers.</p>
+        <ul>
+          <li><strong>Timing:</strong> 2–5 business days depending on area and stock.</li>
+          <li><strong>Tracking:</strong> Tracking link provided on dispatch.</li>
+          <li><strong>Local:</strong> Same/next-day may be possible in Durban for in-stock items.</li>
+          <li><strong>Packaging:</strong> Items are securely boxed and insured in transit.</li>
+        </ul>
+      </div>
 
-      <button class="accordion">Do you offer support?</button>
-      <div class="panel"><p>Yes, our technical team is available to help you with setup and troubleshooting.</p></div>
+      <button class="accordion" aria-expanded="false" aria-controls="p2" id="a2">Can I get a warranty?</button>
+      <div class="panel" id="p2" role="region" aria-labelledby="a2">
+        <p><strong>Yes.</strong> Minimum 1-year warranty on all products.</p>
+        <ul>
+          <li><strong>Extensions:</strong> Many models support 2–3 year cover.</li>
+          <li><strong>Process:</strong> We assist with diagnosis and manufacturer claims.</li>
+          <li><strong>Exclusions:</strong> Physical/liquid damage and consumables unless specified.</li>
+          <li><strong>Keep invoice:</strong> Helps speed up any claim.</li>
+        </ul>
+      </div>
+
+      <button class="accordion" aria-expanded="false" aria-controls="p3" id="a3">Do you offer support?</button>
+      <div class="panel" id="p3" role="region" aria-labelledby="a3">
+        <p><strong>Yes.</strong> Remote and on-site support available.</p>
+        <ul>
+          <li><strong>Setup:</strong> Updates, drivers, antivirus, email.</li>
+          <li><strong>Data:</strong> Optional migration from your old device.</li>
+          <li><strong>Business:</strong> SLAs for priority response and maintenance.</li>
+          <li><strong>Coverage:</strong> On-site in Greater Durban; remote nationwide.</li>
+        </ul>
+      </div>
     </section>
 
     <p><button class="btn-open-modal">More product info</button></p>
@@ -153,30 +208,69 @@
   </footer>
 
   <script>
-  document.addEventListener('click', function(e){
-    if(!e.target.classList.contains('tablink')) return;
-    const wrap = e.target.closest('.tabs-wrap');
-    wrap.querySelectorAll('.tablink').forEach(b=>b.classList.remove('active'));
-    wrap.querySelectorAll('.tabcontent').forEach(c=>c.style.display='none');
-    e.target.classList.add('active');
-    const id = e.target.getAttribute('data-tab');
-    wrap.querySelector('#'+id).style.display = 'block';
-  });
+  
+  document.addEventListener('DOMContentLoaded', function () {
+   
+    const tabButtons = Array.from(document.querySelectorAll('.tablink'));
+    const tabPanels  = Array.from(document.querySelectorAll('.tabcontent'));
 
-  document.querySelectorAll('.accordion').forEach(function(btn){
-    btn.addEventListener('click', function(){
-      btn.classList.toggle('active');
-      const p = btn.nextElementSibling;
-      p.style.display = (p.style.display === 'block') ? 'none' : 'block';
+    function activateTab(id) {
+      tabButtons.forEach(b => {
+        const active = b.getAttribute('data-tab') === id;
+        b.classList.toggle('active', active);
+        b.setAttribute('aria-selected', active ? 'true' : 'false');
+      });
+      tabPanels.forEach(p => p.classList.toggle('is-active', p.id === id));
+    }
+
+    tabButtons.forEach(btn => {
+      btn.addEventListener('click', () => activateTab(btn.getAttribute('data-tab')));
+      btn.addEventListener('keydown', (e) => {
+        if (e.key === 'Enter' || e.key === ' ') { e.preventDefault(); activateTab(btn.getAttribute('data-tab')); }
+      });
     });
-  });
 
-  const modal = document.getElementById('hc-modal');
-  const openBtn = document.querySelector('.btn-open-modal');
-  const closeBtn = document.querySelector('.modal-close');
-  if(openBtn){ openBtn.addEventListener('click', ()=> modal.style.display='block'); }
-  if(closeBtn){ closeBtn.addEventListener('click', ()=> modal.style.display='none'); }
-  modal.addEventListener('click', (e)=>{ if(e.target === modal) modal.style.display='none'; });
+    if (!document.querySelector('.tabcontent.is-active') && tabPanels[0]) {
+      activateTab(tabPanels[0].id);
+    }
+
+    
+    document.querySelectorAll('.accordion').forEach(btn => {
+      const panel = document.getElementById(btn.getAttribute('aria-controls'));
+      btn.addEventListener('click', () => {
+        const isOpen = btn.getAttribute('aria-expanded') === 'true';
+        btn.setAttribute('aria-expanded', String(!isOpen));
+        btn.classList.toggle('active', !isOpen);
+        panel.classList.toggle('open', !isOpen);
+      });
+      btn.setAttribute('aria-expanded', 'false');
+      if (panel) panel.classList.remove('open');
+    });
+
+    
+    const modal = document.getElementById('hc-modal');
+    const openBtn = document.querySelector('.btn-open-modal');
+    const closeBtn = document.querySelector('.modal-close');
+
+    function openModal(){ modal.classList.add('open'); modal.setAttribute('aria-hidden','false'); }
+    function closeModal(){ modal.classList.remove('open'); modal.setAttribute('aria-hidden','true'); }
+
+    if (openBtn) openBtn.addEventListener('click', openModal);
+    if (closeBtn) closeBtn.addEventListener('click', closeModal);
+    if (modal) modal.addEventListener('click', (e) => { if (e.target === modal) closeModal(); });
+
+   
+    const reveals = document.querySelectorAll('.reveal');
+    const io = new IntersectionObserver((entries)=>{
+      entries.forEach(entry=>{
+        if(entry.isIntersecting){
+          entry.target.classList.add('reveal-visible');
+          io.unobserve(entry.target);
+        }
+      });
+    }, { threshold: .15 });
+    reveals.forEach(el=>io.observe(el));
+  });
   </script>
 </body>
 </html>
