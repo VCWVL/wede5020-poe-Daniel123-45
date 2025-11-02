@@ -5,6 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Home Page</title>
   <link rel="stylesheet" href="../css/styles.css">
+
 </head>
 <body id="topOfPage">
 
@@ -37,6 +38,24 @@
       Whether you are looking for a new computer, software, or accessories, we have you covered. 
       Our knowledgeable staff is here to assist you in finding the perfect products for your needs.
     </p>
+    <p>Here is a gallery of our logo</p>
+
+    <div class="image-gallery">
+      <img src="../_Images/HauptComputers.jpeg" alt="Haupt Computers Logo">
+      <img src="../_Images/HauptComputers.jpeg" alt="Haupt Computers Logo">
+      <img src="../_Images/HauptComputers.jpeg" alt="Haupt Computers Logo">
+      <img src="../_Images/HauptComputers.jpeg" alt="Haupt Computers Logo">
+      <img src="../_Images/HauptComputers.jpeg" alt="Haupt Computers Logo">
+      <img src="../_Images/HauptComputers.jpeg" alt="Haupt Computers Logo">
+      <img src="../_Images/HauptComputers.jpeg" alt="Haupt Computers Logo">
+      <img src="../_Images/HauptComputers.jpeg" alt="Haupt Computers Logo">
+      <img src="../_Images/HauptComputers.jpeg" alt="Haupt Computers Logo">
+      <img src="../_Images/HauptComputers.jpeg" alt="Haupt Computers Logo">
+      <img src="../_Images/HauptComputers.jpeg" alt="Haupt Computers Logo">
+      <img src="../_Images/HauptComputers.jpeg" alt="Haupt Computers Logo">
+      <img src="../_Images/HauptComputers.jpeg" alt="Haupt Computers Logo">
+  
+    </div>
   </main>
 
   <footer>
@@ -47,5 +66,29 @@
     </p>
     <a href="#topOfPage">Back to Top</a>
   </footer>
+
+  <script>
+    const galleryImages = document.querySelectorAll('.image-gallery img');
+
+    galleryImages.forEach(img => {
+      img.addEventListener('click', () => {
+        const isActive = img.classList.contains('active');
+        
+        
+        galleryImages.forEach(i => {
+          i.classList.remove('active');
+          i.classList.remove('dimmed');
+        });
+
+        
+        if (!isActive) {
+          img.classList.add('active');
+          galleryImages.forEach(i => {
+            if (i !== img) i.classList.add('dimmed');
+          });
+        }
+      });
+    });
+  </script>
 </body>
 </html>
