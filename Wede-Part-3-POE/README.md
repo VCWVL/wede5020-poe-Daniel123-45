@@ -6,7 +6,7 @@ The goal and objective of this project is to create a website that will be used 
 Some key features from the current website would be the working links and back to top feature.
 I've created the website over the past months August and September. I have been able to achieve a decent website.
 
-Link to GitHub -> https://github.com/VCWVL/wede5020-part-2-Daniel-Haupt/tree/main
+<h1>Link to GitHub -> https://github.com/VCWVL/wede5020-poe-Daniel123-45/tree/main </h1>
 
 
 
