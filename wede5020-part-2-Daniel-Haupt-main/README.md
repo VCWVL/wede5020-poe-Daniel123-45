@@ -51,9 +51,22 @@ Image of Phone screen size
 
 Referencing from the main website:
 
-We offer a full range of IT support services. We have many years of experience in supporting office and network environments. [Online] Available at: https://www.haupt.co.za/ [3 October 2025]. 
-We offer a full range of IT support services. We have many years of experience in supporting office and network environments. [Online] Available at: https://www.haupt.co.za/about/about.htm [3 October 2025]. 
-We offer a full range of IT support services. We have many years of experience in supporting office and network environments. [Online] Available at: https://www.haupt.co.za/services/services.htm [3 October 2025]. 
-We offer a full range of IT support services. We have many years of experience in supporting office and network environments. [Online] Available at:  https://www.haupt.co.za/contact/contact.htm [3 October 2025]. 
+We offer a full range of IT support services. We have many years of experience in supporting office and network environments. [Online] Available at: https://www.haupt.co.za/ [Accessed 3 October 2025]. 
+We offer a full range of IT support services. We have many years of experience in supporting office and network environments. [Online] Available at: https://www.haupt.co.za/about/about.htm [Accessed 3 October 2025]. 
+We offer a full range of IT support services. We have many years of experience in supporting office and network environments. [Online] Available at: https://www.haupt.co.za/services/services.htm [Accessed 3 October 2025]. 
+We offer a full range of IT support services. We have many years of experience in supporting office and network environments. [Online] Available at:  https://www.haupt.co.za/contact/contact.htm [Accessed 3 October 2025].
+
+Image Referencing:
+
+Simply Coding empowes youth and adults with essential life skills through technology education and coding courses. [online] Available at: https://simplycoding.in/computer-network-devices/ [Accessed 3 October 2025].
+Get expert-managed IT services, IT support, cloud solutions, and cybersecurity to keep your business secure, efficient, and ready for the future. [online] Available at: https://vintageits.com/desktop-vs-laptop-vs-tablet/ [Accessed 3 October 2025].
+Discover recipes, home ideas, style inspiration and other ideas to try. [online] Available at: https://za.pinterest.com/kerrymurr6/storage-devices/ [Accessed 3 October 2025].
+Explore Microsoft products and services and support for your home or business. [online] Available at: https://www.microsoft.com/en-us/surface/do-more-with-surface/how-to-get-the-most-out-your-docking-station [Accessed 3 October 2025].
+PCBros is a company designed to meet the customer's demand for the best price to performance gaming computer. [online] Available at: https://pcbros.tech/?srsltid=AfmBOorPc71lJMZYYB6n5DdT6YZ6dhi4HRcEg-HYXM9Z-Sb6bmEX3zvP [Accessed 3 October 2025].
+Discover our range of industry leading managed document services, production printing, office printers, photocopiers, IT services and more from Ricoh. [online] Available at: https://www.ricoh.co.za/products/scanners/ [Accessed 3 October 2025].
+We offer a full range of IT support services. We have many years experience in supporting office and network environments. [online] Available at: https://www.haupt.co.za/default.htm [Accessed 3 October 2025].
+
+
+
 
 
