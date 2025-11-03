@@ -107,3 +107,4 @@ nav a:hover,nav a:focus,nav a:active{background:var(--dark-2);text-decoration:un
   .image-gallery img.active{transform:scale(1.2)}
 }
 @media(min-width:650px){body{padding:2.5rem}}
+
